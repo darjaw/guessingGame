@@ -6,10 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        // difficulty selection
-
-
         //menu
         while (true) {
             int difficulty = 0;
@@ -47,6 +43,11 @@ public class Main {
                     Random rand = new Random();
                     int randGameNum = rand.nextInt(100000);
                     Game.randGame(randGameNum);
+                }
+                case 5 -> {
+                    //chaos mode     (not implemented)
+                    System.out.println("Chaos isn't here yet! \uD83E\uDD2B");
+                    System.out.println();
                 }
                 case 9 -> {
                     System.out.println("Goodbye!");

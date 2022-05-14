@@ -1,5 +1,7 @@
 package com.darius.wtf;
 
+import com.darius.wtf.Game.*;
+
 import java.util.*;
 
 public class Main {
@@ -11,11 +13,13 @@ public class Main {
             int difficulty = 0;
             System.out.println("""
                     Select your difficulty!
+                    
                     1.Easy
                     2.Medium
                     3.Hard
                     4.Random
                     9.Exit
+                    
                     """);
             Scanner scanner = new Scanner(System.in);
         try {
@@ -28,21 +32,19 @@ public class Main {
             switch (difficulty) {
                 case 1 -> {
                     scanner.nextLine();
-                    Game.easyGame();
+                    new EasyGame();
                 }
                 case 2 -> {
                     scanner.nextLine();
-                    Game.medGame();
+                    new MediumGame();
                 }
                 case 3 -> {
                     scanner.nextLine();
-                    Game.hardGame();
+                    new HardGame();
                 }
                 case 4 -> {
                     scanner.nextLine();
-                    Random rand = new Random();
-                    int randGameNum = rand.nextInt(100000);
-                    Game.randGame(randGameNum);
+                    new RandomGame();
                 }
                 case 5 -> {
                     //chaos mode     (not implemented)
